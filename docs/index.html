@@ -128,16 +128,6 @@
           determines arm assignment and skill selection <em>(e)</em>, leading to dual-arm execution <em>(f)</em>.
         </figcaption>
       </figure>
-
-      <figure style="margin-top: 36px;">
-        <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" style="max-width: 520px; margin: 0 auto;" />
-        <figcaption>
-          <strong>Visual prompting for arm assignment.</strong> Validated grasp candidates are overlaid on the scene with
-          symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left), <strong>R</strong>&nbsp;(right),
-          <strong>B</strong>&nbsp;(both) &mdash; and paired with a textual prompt, letting the vision&ndash;language model
-          reason about arm-to-object assignment and skill sequencing.
-        </figcaption>
-      </figure>
     </div>
   </section>
 
@@ -157,10 +147,26 @@
     </div>
   </section>
 
-  <!-- ===================== RESULTS ===================== -->
+  <!-- ===================== VISUAL PROMPTING ===================== -->
   <section class="section">
     <div class="container narrow">
-      <h2 class="section-title">Quantitative Results</h2>
+      <h2 class="section-title">Arm Assignment via Vision&ndash;Language Reasoning</h2>
+      <figure>
+        <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" style="max-width: 520px; margin: 0 auto;" />
+        <figcaption>
+          <strong>Visual prompting for arm assignment.</strong> The predicted affordances generate grasp candidates that are
+          overlaid on the scene with symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left),
+          <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both) &mdash; and paired with a textual prompt, letting
+          the vision&ndash;language model reason about arm-to-object assignment and skill sequencing.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTS ===================== -->
+  <section class="section alt">
+    <div class="container narrow">
+      <h2 class="section-title">Results</h2>
       <p class="muted">Per-point affordance prediction quality (confidence threshold &tau; = 0.6), averaged over left and right affordance maps. Best in <strong>bold</strong>.</p>
       <div class="table-wrap">
         <table>
@@ -198,7 +204,7 @@
   </section>
 
   <!-- ===================== REAL-WORLD ===================== -->
-  <section class="section alt">
+  <section class="section">
     <div class="container">
       <h2 class="section-title">Real-World Experiments</h2>
       <figure>
@@ -213,7 +219,7 @@
   </section>
 
   <!-- ===================== BIBTEX ===================== -->
-  <section class="section">
+  <section class="section alt">
     <div class="container narrow">
       <h2 class="section-title">BibTeX</h2>
       <pre class="bibtex"><code>BibTeX coming soon.</code></pre>
