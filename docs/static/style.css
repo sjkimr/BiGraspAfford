@@ -1,0 +1,265 @@
+/* ===================== BiGraspAfford project page ===================== */
+:root {
+  --accent: #2f6df0;
+  --accent-dark: #1d4ed8;
+  --ink: #1a1a1f;
+  --muted: #5b6270;
+  --line: #e6e8ee;
+  --bg: #ffffff;
+  --bg-alt: #f6f8fc;
+  --best-bg: #eaf2ff;
+  --max-w: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+.container.narrow { max-width: 820px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 72px 0 56px;
+  background:
+    radial-gradient(1200px 400px at 50% -120px, rgba(47,109,240,0.10), transparent 70%),
+    linear-gradient(180deg, #fbfcff 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.venue {
+  display: inline-block;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent-dark);
+  background: var(--best-bg);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin: 0 0 22px;
+}
+
+.title {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+  background: linear-gradient(120deg, var(--accent-dark), #6a3df0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 2.6vw, 1.55rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 10px 0 28px;
+  line-height: 1.4;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 20px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.authors .author { white-space: nowrap; }
+.authors sup { color: var(--accent); font-weight: 600; }
+
+.affiliations {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+.affiliations p { margin: 2px 0; }
+.affiliations sup { color: var(--accent); }
+.corresponding { font-size: 0.86rem; }
+
+/* ---------- Buttons ---------- */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--ink);
+  color: #fff;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.96rem;
+  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(20,22,30,0.12);
+}
+.btn:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(47,109,240,0.32);
+}
+.btn i { font-size: 1.02rem; }
+.btn .ai-arxiv { display: none; } /* fallback handled by file-lines icon */
+
+/* ---------- Sections ---------- */
+.section { padding: 56px 0; }
+.section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.teaser-section { padding: 44px 0 12px; }
+
+.section-title {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 28px;
+  letter-spacing: -0.01em;
+}
+
+.abstract {
+  font-size: 1.08rem;
+  text-align: justify;
+  color: #2a2d36;
+}
+
+.muted { color: var(--muted); text-align: center; font-size: 0.95rem; margin-top: -8px; }
+
+/* ---------- Figures ---------- */
+figure { margin: 0; }
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(20,22,40,0.07);
+}
+figcaption {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 14px;
+  text-align: center;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 22px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(20,22,40,0.10); }
+.card-icon {
+  width: 52px; height: 52px;
+  margin: 0 auto 14px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: var(--best-bg);
+  color: var(--accent-dark);
+  font-size: 1.3rem;
+}
+.card h3 { margin: 0 0 8px; font-size: 1.08rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+/* ---------- Table ---------- */
+.table-wrap { overflow-x: auto; margin-top: 18px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(20,22,40,0.06);
+}
+thead th {
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 14px;
+  text-align: center;
+}
+thead th:nth-child(2) { text-align: left; }
+tbody td { padding: 10px 14px; text-align: center; border-bottom: 1px solid var(--line); }
+tbody td:nth-child(2) { text-align: left; }
+td.split { font-weight: 700; background: var(--bg-alt); vertical-align: middle; }
+tr.best td { background: var(--best-bg); font-weight: 700; }
+.footnote { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+
+/* ---------- Stat highlights ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 38px;
+}
+.stat {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 14px;
+  text-align: center;
+}
+.stat .num {
+  display: block;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+.stat .lbl { display: block; font-size: 0.84rem; color: var(--muted); margin-top: 6px; }
+
+/* ---------- BibTeX ---------- */
+.bibtex {
+  background: #11131a;
+  color: #e8ecf5;
+  border-radius: 12px;
+  padding: 20px 22px;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.bibtex code { font-family: 'SF Mono', 'Fira Code', Consolas, monospace; }
+
+/* ---------- Footer ---------- */
+.footer { padding: 40px 0; background: var(--bg-alt); border-top: 1px solid var(--line); text-align: center; }
+.ack { color: var(--muted); font-size: 0.9rem; max-width: 720px; margin: 0 auto 14px; }
+.credit { color: var(--muted); font-size: 0.82rem; margin: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .cards { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .abstract { text-align: left; }
+}

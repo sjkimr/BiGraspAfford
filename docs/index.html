@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiGraspAfford: Collision-Aware Bimanual Grasp Affordance Learning for Dual-Arm Manipulation</title>
+  <meta name="description" content="BiGraspAfford predicts arm-specific, collision-aware grasp affordances for dual-arm robotic manipulation in cluttered scenes." />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="BiGraspAfford: Collision-Aware Bimanual Grasp Affordance Learning for Dual-Arm Manipulation" />
+  <meta property="og:description" content="Arm-specific, collision-aware grasp affordances for dual-arm manipulation in clutter." />
+  <meta property="og:image" content="static/images/teaser.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="container">
+      <p class="venue"><i class="fa-solid fa-robot"></i>&nbsp; IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026</p>
+      <h1 class="title">BiGraspAfford</h1>
+      <h2 class="subtitle">Collision-Aware Bimanual Grasp Affordance Learning<br />for Dual-Arm Manipulation</h2>
+
+      <div class="authors">
+        <span class="author"><a href="mailto:sungjun4257@kist.re.kr">SungJun Kim</a><sup>1,2</sup></span>
+        <span class="author">MinJi Seo<sup>1</sup></span>
+        <span class="author">Yisoo Lee<sup>1</sup></span>
+        <span class="author">Sangpil Kim<sup>2,&#42;</sup></span>
+        <span class="author">KangGeon Kim<sup>1,&#42;</sup></span>
+      </div>
+
+      <div class="affiliations">
+        <p><sup>1</sup>&nbsp;Artificial Intelligence and Robotics Institute, Korea Institute of Science and Technology (KIST)</p>
+        <p><sup>2</sup>&nbsp;Department of Artificial Intelligence, Korea University</p>
+        <p class="corresponding"><sup>&#42;</sup>&nbsp;Corresponding Authors</p>
+      </div>
+
+      <div class="buttons">
+        <a class="btn" href="static/BiGraspAfford_paper.pdf">
+          <i class="fa-solid fa-file-pdf"></i><span>Paper</span>
+        </a>
+        <!-- Replace with your arXiv link when available -->
+        <a class="btn" href="#" data-edit="arxiv">
+          <i class="ai ai-arxiv"></i><i class="fa-solid fa-file-lines"></i><span>arXiv</span>
+        </a>
+        <a class="btn" href="https://github.com/sungjun4257/BiGraspAfford">
+          <i class="fa-brands fa-github"></i><span>Code</span>
+        </a>
+        <!-- Replace with your video link when available -->
+        <a class="btn" href="#" data-edit="video">
+          <i class="fa-brands fa-youtube"></i><span>Video</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== TEASER ===================== -->
+  <section class="section teaser-section">
+    <div class="container narrow">
+      <figure>
+        <img src="static/images/teaser.png" alt="Concept of bimanual grasp affordance and affordance-guided dual-arm execution" />
+        <figcaption>
+          <strong>Motivation.</strong> Each arm prefers a different region of the same object. BiGraspAfford predicts
+          <em>arm-specific</em> grasp affordances (left vs. right) to guide reliable arm-to-object assignment for dual-arm manipulation in clutter.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== ABSTRACT ===================== -->
+  <section class="section">
+    <div class="container narrow">
+      <h2 class="section-title">Abstract</h2>
+      <p class="abstract">
+        In complex real-world environments, leveraging both arms becomes essential for efficient robotic manipulation.
+        However, most grasping approaches remain focused on single-arm settings, and directly extending such methods to
+        dual-arm systems leads to ambiguous arm&ndash;object assignments, making it unclear which arm is better suited to
+        grasp which region. To address this challenge, we propose <strong>BiGraspAfford</strong>, a collision-aware
+        bimanual affordance framework that predicts arm-specific grasp affordances from egocentric observations. Our
+        architecture disentangles object-centric representations from scene-level spatial context, enabling the model to
+        reason about potential collisions between the gripper and the environment. We further construct a new bimanual
+        affordance dataset built on the GraspNet-1Billion dataset with arm-specific affordance annotations. Extensive
+        experiments demonstrate consistent improvements over adapted baselines on both seen and unseen objects. We
+        further show real-world applicability by integrating our approach into a hierarchical dual-arm manipulation
+        pipeline.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CONTRIBUTIONS ===================== -->
+  <section class="section alt">
+    <div class="container narrow">
+      <h2 class="section-title">Contributions</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+          <h3>Arm-Specific Affordance</h3>
+          <p>A collision-aware framework that predicts grasp affordances conditioned on object geometry, the executing arm, and surrounding scene context.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Bimanual Dataset</h3>
+          <p>A new dataset extending GraspNet-1Billion with left- and right-arm affordance annotations across cluttered, multi-viewpoint scenes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>Dual-Arm Pipeline</h3>
+          <p>An affordance-guided pipeline integrating perception, vision&ndash;language reasoning, and constraint-aware control for robust real-world execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PIPELINE ===================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Method Overview</h2>
+      <figure>
+        <img src="static/images/pipeline.png" alt="Overview of the proposed instruction-guided dual-arm pipeline" />
+        <figcaption>
+          Given a language instruction and an RGB-D observation, a vision&ndash;language model grounds the instruction and
+          segments the target <em>(a&ndash;b)</em>. Our network predicts arm-specific grasp affordances under clutter
+          <em>(c)</em>, grasp candidates are generated and overlaid as visual prompts <em>(d)</em>, and a decision module
+          determines arm assignment and skill selection <em>(e)</em>, leading to dual-arm execution <em>(f)</em>.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== ARCHITECTURE ===================== -->
+  <section class="section alt">
+    <div class="container narrow">
+      <h2 class="section-title">Bimanual Grasp Affordance Model</h2>
+      <figure>
+        <img src="static/images/architecture.png" alt="Architecture of the bimanual grasp affordance model" />
+        <figcaption>
+          Decoupled encoders process the <strong>object</strong> point cloud (PointNet++) and the <strong>scene</strong>
+          point cloud (MinkowskiEngine ResUNet14). A collision-aware <strong>cross-attention</strong> module with rotary
+          positional embeddings fuses object and scene features, and two arm-specific heads predict left and right
+          affordances. An auxiliary graspness head regularizes the scene encoder during training.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTS ===================== -->
+  <section class="section">
+    <div class="container narrow">
+      <h2 class="section-title">Quantitative Results</h2>
+      <p class="muted">Per-point affordance prediction quality (confidence threshold &tau; = 0.6), averaged over left and right affordance maps. Best in <strong>bold</strong>.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Split</th><th>Method</th><th>Precision&nbsp;&uarr;</th><th>Recall&nbsp;&uarr;</th><th>mIoU&nbsp;&uarr;</th><th>mAP&nbsp;&uarr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td rowspan="3" class="split">Seen</td><td>3DAffordanceNet*</td><td>0.3023</td><td>0.3114</td><td>0.1979</td><td>0.3722</td></tr>
+            <tr><td>Ours (single encoder)</td><td>0.2675</td><td>0.3817</td><td>0.2235</td><td>0.4269</td></tr>
+            <tr class="best"><td>Ours</td><td>0.4022</td><td>0.4530</td><td>0.2928</td><td>0.4752</td></tr>
+            <tr><td rowspan="3" class="split">Unseen</td><td>3DAffordanceNet*</td><td>0.2493</td><td>0.2300</td><td>0.1482</td><td>0.3163</td></tr>
+            <tr><td>Ours (single encoder)</td><td>0.2247</td><td>0.2632</td><td>0.1670</td><td>0.3533</td></tr>
+            <tr class="best"><td>Ours</td><td>0.3542</td><td>0.3548</td><td>0.2438</td><td>0.4316</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="footnote">*3DAffordanceNet is augmented with a two-head decoder for bimanual prediction and retrained on our dataset.</p>
+
+      <div class="stats">
+        <div class="stat"><span class="num">86.0%</span><span class="lbl">Real-world dual-arm<br />success rate</span></div>
+        <div class="stat"><span class="num">+6.0%</span><span class="lbl">over arm-agnostic<br />variant (80.0%)</span></div>
+        <div class="stat"><span class="num">30.4s</span><span class="lbl">avg. execution time<br />(vs. 39.1s arm-agnostic)</span></div>
+        <div class="stat"><span class="num">54,745</span><span class="lbl">training samples<br />via viewpoint propagation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REAL-WORLD ===================== -->
+  <section class="section alt">
+    <div class="container">
+      <h2 class="section-title">Real-World Experiments</h2>
+      <figure>
+        <img src="static/images/realworld.png" alt="Real-world dual-arm manipulation results across three scenarios" />
+        <figcaption>
+          Real-world results on a dual-arm platform (two Franka Research 3 arms, Intel RealSense L515):
+          <em>(1)</em> simultaneous bimanual grasping, <em>(2)</em> single-arm grasping with intermediate placement under an
+          arm-availability constraint, and <em>(3)</em> sequential left-then-right grasping to avoid arm crossing.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== BIBTEX ===================== -->
+  <section class="section">
+    <div class="container narrow">
+      <h2 class="section-title">BibTeX</h2>
+      <pre class="bibtex"><code>@inproceedings{kim2026bigraspafford,
+  title     = {BiGraspAfford: Collision-Aware Bimanual Grasp Affordance Learning for Dual-Arm Manipulation},
+  author    = {Kim, SungJun and Seo, MinJi and Lee, Yisoo and Kim, Sangpil and Kim, KangGeon},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container narrow">
+      <p class="ack">
+        This work was supported by the Korea Institute of Science and Technology Institutional Program
+        (Project No.&nbsp;2E33602) and by Hyundai Motor Company and Kia.
+      </p>
+      <p class="credit">
+        Website template adapted from the
+        <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+        Page content &copy; the authors.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
