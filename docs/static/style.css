@@ -130,6 +130,15 @@ a:hover { text-decoration: underline; }
 .btn i { font-size: 1.02rem; }
 .btn .ai-arxiv { display: none; } /* fallback handled by file-lines icon */
 
+/* temporarily disabled buttons (links not yet released) */
+.btn.disabled {
+  background: #9aa1ad;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  pointer-events: none;
+}
+
 /* ---------- Sections ---------- */
 .section { padding: 56px 0; }
 .section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
