@@ -42,34 +42,53 @@ a:hover { text-decoration: underline; }
 
 .venue {
   display: inline-block;
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--accent-dark);
   background: var(--best-bg);
-  padding: 6px 14px;
+  border: 1px solid rgba(47,109,240,0.18);
+  padding: 7px 16px;
   border-radius: 999px;
-  margin: 0 0 22px;
+  margin: 0 0 26px;
 }
 
 .title {
   font-family: 'Newsreader', Georgia, serif;
-  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  font-size: clamp(3rem, 8.5vw, 5.2rem);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
+  line-height: 1;
   margin: 0;
-  background: linear-gradient(120deg, var(--accent-dark), #6a3df0);
+  color: var(--ink);
+}
+.title-accent {
+  background: linear-gradient(115deg, var(--accent) 0%, #6a3df0 55%, #9333ea 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+/* thin accent rule under the title */
+.title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 20px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #9333ea);
+  opacity: 0.9;
+}
 
-.subtitle {
-  font-size: clamp(1.1rem, 2.6vw, 1.55rem);
-  font-weight: 600;
-  color: var(--ink);
-  margin: 10px 0 28px;
-  line-height: 1.4;
+.tagline {
+  font-size: clamp(1.05rem, 2.4vw, 1.4rem);
+  font-weight: 500;
+  color: #3a3f4b;
+  max-width: 700px;
+  margin: 22px auto 30px;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
 }
 
 .authors {

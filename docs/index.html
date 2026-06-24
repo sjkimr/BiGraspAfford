@@ -23,12 +23,12 @@
   <!-- ===================== HERO ===================== -->
   <header class="hero">
     <div class="container">
-      <p class="venue"><i class="fa-solid fa-robot"></i>&nbsp; IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026</p>
-      <h1 class="title">BiGraspAfford</h1>
-      <h2 class="subtitle">Collision-Aware Bimanual Grasp Affordance Learning<br />for Dual-Arm Manipulation</h2>
+      <p class="venue"><i class="fa-solid fa-robot"></i>&nbsp; IROS 2026 &middot; IEEE/RSJ Int. Conf. on Intelligent Robots and Systems</p>
+      <h1 class="title">BiGrasp<span class="title-accent">Afford</span></h1>
+      <p class="tagline">Collision-Aware Bimanual Grasp Affordance Learning for Dual-Arm Manipulation</p>
 
       <div class="authors">
-        <span class="author"><a href="mailto:sungjun4257@kist.re.kr">SungJun Kim</a><sup>1,2</sup></span>
+        <span class="author">SungJun Kim<sup>1,2</sup></span>
         <span class="author">MinJi Seo<sup>1</sup></span>
         <span class="author">Yisoo Lee<sup>1</sup></span>
         <span class="author">Sangpil Kim<sup>2,&#42;</sup></span>
@@ -49,7 +49,7 @@
         <a class="btn" href="#" data-edit="arxiv">
           <i class="ai ai-arxiv"></i><i class="fa-solid fa-file-lines"></i><span>arXiv</span>
         </a>
-        <a class="btn" href="https://github.com/sungjun4257/BiGraspAfford">
+        <a class="btn" href="https://github.com/sjkimr/BiGraspAfford">
           <i class="fa-brands fa-github"></i><span>Code</span>
         </a>
         <!-- Replace with your video link when available -->
@@ -130,6 +130,16 @@
           determines arm assignment and skill selection <em>(e)</em>, leading to dual-arm execution <em>(f)</em>.
         </figcaption>
       </figure>
+
+      <figure style="margin-top: 36px;">
+        <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" />
+        <figcaption>
+          <strong>Visual prompting for arm assignment.</strong> Validated grasp candidates are overlaid on the scene with
+          symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left), <strong>R</strong>&nbsp;(right),
+          <strong>B</strong>&nbsp;(both) &mdash; and paired with a textual prompt, letting the vision&ndash;language model
+          reason about arm-to-object assignment and skill sequencing.
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -170,6 +180,15 @@
         </table>
       </div>
       <p class="footnote">*3DAffordanceNet is augmented with a two-head decoder for bimanual prediction and retrained on our dataset.</p>
+
+      <figure style="margin-top: 30px;">
+        <img src="static/images/qualitative.png" alt="Qualitative comparison of predicted left and right affordances on an unseen object" />
+        <figcaption>
+          <strong>Qualitative comparison.</strong> Predicted left- and right-arm affordances on an unseen object. Unlike
+          3DAffordanceNet and the single-encoder variant, our model avoids regions near obstacles and produces spatially
+          precise, arm-specific affordance maps.
+        </figcaption>
+      </figure>
 
       <div class="stats">
         <div class="stat"><span class="num">86.0%</span><span class="lbl">Real-world dual-arm<br />success rate</span></div>
