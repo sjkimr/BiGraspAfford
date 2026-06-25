@@ -197,11 +197,38 @@
           the vision&ndash;language model reason about arm-to-object assignment and skill sequencing.
         </figcaption>
       </figure>
+
+      <figure style="margin-top: 36px;">
+        <img src="static/images/vlm_prompt.png" alt="Example text prompt provided to the vision-language model" style="max-width: 440px; margin: 0 auto;" />
+        <figcaption>
+          <strong>Textual prompt.</strong> The marked image is paired with a structured text prompt &mdash; task instruction,
+          per-arm grasp costs, available skills, grasp-label semantics (L/R/B), and step-by-step reasoning &mdash; from which
+          the model outputs the arm-to-object assignment and skill sequence.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== CONSTRAINT-AWARE EXECUTION ===================== -->
+  <section class="section">
+    <div class="container narrow">
+      <h2 class="section-title">Constraint-Aware Dual-Arm Execution</h2>
+      <div class="dual-fig">
+        <figure>
+          <img src="static/images/collision_self.png" alt="Self-collision modeling with link line segments" />
+          <figcaption><strong>(a) Self-collision.</strong> Robot links are modeled as line segments to penalize inter-arm collisions.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/collision_env.png" alt="Environmental collision with voxelized scene and cylindrical camera model" />
+          <figcaption><strong>(b) Environmental collision.</strong> A voxelized scene and a cylindrical camera model bound robot&ndash;environment contact.</figcaption>
+        </figure>
+      </div>
+      <p class="muted" style="margin-top: 18px;">A single-instance MPPI controller optimizes whole-body trajectories under self-collision, joint-limit, and environment constraints for safe real-world execution.</p>
     </div>
   </section>
 
   <!-- ===================== REAL-WORLD ===================== -->
-  <section class="section">
+  <section class="section alt">
     <div class="container">
       <h2 class="section-title">Real-World Experiments</h2>
       <figure>
@@ -223,7 +250,7 @@
   </section>
 
   <!-- ===================== VIDEO ===================== -->
-  <section class="section alt" id="video">
+  <section class="section" id="video">
     <div class="container narrow">
       <h2 class="section-title">Video</h2>
       <p class="muted">Full demonstration &mdash; from perception and arm-specific affordance prediction through vision&ndash;language reasoning to real-world dual-arm execution.</p>
@@ -237,7 +264,7 @@
   </section>
 
   <!-- ===================== BIBTEX ===================== -->
-  <section class="section">
+  <section class="section alt">
     <div class="container narrow">
       <h2 class="section-title">BibTeX</h2>
       <pre class="bibtex"><code>BibTeX coming soon.</code></pre>
