@@ -191,6 +191,8 @@ a:hover { text-decoration: underline; }
   align-items: start;
 }
 @media (max-width: 640px) { .dual-fig { grid-template-columns: 1fr; } }
+/* uniform white frame so (a)/(b) match despite different scene backgrounds */
+.dual-fig figure img { background: #fff; padding: 16px; }
 
 figure { margin: 0; }
 figure img {
