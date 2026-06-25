@@ -197,17 +197,20 @@ a:hover { text-decoration: underline; }
 /* two prompt images side by side, matched height, centered */
 .vlm-row {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .vlm-row img {
   width: auto;
-  height: 260px;
+  height: 300px;
   max-width: 100%;
 }
-@media (max-width: 640px) { .vlm-row img { height: auto; width: 100%; } }
+@media (max-width: 640px) {
+  .vlm-row { justify-content: center; }
+  .vlm-row img { height: auto; width: 100%; }
+}
 
 figure { margin: 0; }
 figure img {
