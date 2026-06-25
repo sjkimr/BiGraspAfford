@@ -188,19 +188,24 @@
   <section class="section alt">
     <div class="container narrow">
       <h2 class="section-title">Arm Assignment via Vision&ndash;Language Reasoning</h2>
-      <figure>
-        <div class="vlm-row">
+      <div class="dual-fig centered">
+        <figure>
           <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" />
+          <figcaption>
+            <strong>Visual prompting.</strong> Grasp candidates are overlaid on the scene with symbolic arm-availability
+            markers &mdash; <strong>L</strong>&nbsp;(left), <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both) &mdash;
+            as visual cues for arm-to-object assignment.
+          </figcaption>
+        </figure>
+        <figure>
           <img src="static/images/vlm_prompt.png" alt="Example text prompt provided to the vision-language model" />
-        </div>
-        <figcaption>
-          <strong>Visual prompting for arm assignment.</strong> <em>(Left)</em> The predicted affordances generate grasp
-          candidates overlaid on the scene with symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left),
-          <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both). <em>(Right)</em> The marked image is paired with a
-          structured text prompt &mdash; task instruction, per-arm grasp costs, skills, label semantics, and step-by-step
-          reasoning &mdash; from which the vision&ndash;language model outputs the arm-to-object assignment and skill sequence.
-        </figcaption>
-      </figure>
+          <figcaption>
+            <strong>Textual prompt.</strong> The marked image is paired with a structured text prompt &mdash; task instruction,
+            per-arm grasp costs, skills, label semantics, and step-by-step reasoning &mdash; from which the model outputs the
+            arm-to-object assignment and skill sequence.
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -208,7 +213,7 @@
   <section class="section">
     <div class="container narrow">
       <h2 class="section-title">Constraint-Aware Dual-Arm Execution</h2>
-      <div class="dual-fig">
+      <div class="dual-fig framed">
         <figure>
           <img src="static/images/collision_self.png" alt="Self-collision modeling with link line segments" />
           <figcaption><strong>(a) Self-collision.</strong> Robot links are modeled as line segments to penalize inter-arm collisions.</figcaption>

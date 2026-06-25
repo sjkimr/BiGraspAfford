@@ -191,26 +191,10 @@ a:hover { text-decoration: underline; }
   align-items: start;
 }
 @media (max-width: 640px) { .dual-fig { grid-template-columns: 1fr; } }
+/* vertically center the two columns when their heights differ */
+.dual-fig.centered { align-items: center; }
 /* uniform white frame so (a)/(b) match despite different scene backgrounds */
-.dual-fig figure img { background: #fff; padding: 16px; }
-
-/* two prompt images side by side, matched height, centered */
-.vlm-row {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.vlm-row img {
-  width: auto;
-  height: 300px;
-  max-width: 100%;
-}
-@media (max-width: 640px) {
-  .vlm-row { justify-content: center; }
-  .vlm-row img { height: auto; width: 100%; }
-}
+.dual-fig.framed figure img { background: #fff; padding: 16px; }
 
 figure { margin: 0; }
 figure img {
