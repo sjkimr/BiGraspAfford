@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sjkimr.github.io/BiGraspAfford/sitemap.xml
