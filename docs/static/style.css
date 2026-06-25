@@ -194,6 +194,21 @@ a:hover { text-decoration: underline; }
 /* uniform white frame so (a)/(b) match despite different scene backgrounds */
 .dual-fig figure img { background: #fff; padding: 16px; }
 
+/* two prompt images side by side, matched height, centered */
+.vlm-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.vlm-row img {
+  width: auto;
+  height: 260px;
+  max-width: 100%;
+}
+@media (max-width: 640px) { .vlm-row img { height: auto; width: 100%; } }
+
 figure { margin: 0; }
 figure img {
   display: block;

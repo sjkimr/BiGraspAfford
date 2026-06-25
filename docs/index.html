@@ -188,25 +188,19 @@
   <section class="section alt">
     <div class="container narrow">
       <h2 class="section-title">Arm Assignment via Vision&ndash;Language Reasoning</h2>
-      <div class="dual-fig">
-        <figure>
+      <figure>
+        <div class="vlm-row">
           <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" />
-          <figcaption>
-            <strong>Visual prompting for arm assignment.</strong> The predicted affordances generate grasp candidates that are
-            overlaid on the scene with symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left),
-            <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both) &mdash; and paired with a textual prompt, letting
-            the vision&ndash;language model reason about arm-to-object assignment and skill sequencing.
-          </figcaption>
-        </figure>
-        <figure>
           <img src="static/images/vlm_prompt.png" alt="Example text prompt provided to the vision-language model" />
-          <figcaption>
-            <strong>Textual prompt.</strong> The marked image is paired with a structured text prompt &mdash; task instruction,
-            per-arm grasp costs, available skills, grasp-label semantics (L/R/B), and step-by-step reasoning &mdash; from which
-            the model outputs the arm-to-object assignment and skill sequence.
-          </figcaption>
-        </figure>
-      </div>
+        </div>
+        <figcaption>
+          <strong>Visual prompting for arm assignment.</strong> <em>(Left)</em> The predicted affordances generate grasp
+          candidates overlaid on the scene with symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left),
+          <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both). <em>(Right)</em> The marked image is paired with a
+          structured text prompt &mdash; task instruction, per-arm grasp costs, skills, label semantics, and step-by-step
+          reasoning &mdash; from which the vision&ndash;language model outputs the arm-to-object assignment and skill sequence.
+        </figcaption>
+      </figure>
     </div>
   </section>
 
