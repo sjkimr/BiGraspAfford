@@ -191,10 +191,36 @@ a:hover { text-decoration: underline; }
   align-items: start;
 }
 @media (max-width: 640px) { .dual-fig { grid-template-columns: 1fr; } }
-/* vertically center the two columns when their heights differ */
-.dual-fig.centered { align-items: center; }
 /* uniform white frame so (a)/(b) match despite different scene backgrounds */
 .dual-fig.framed figure img { background: #fff; padding: 16px; }
+
+/* prompts: images row (vertically centered to each other) + captions row (top-aligned) */
+.vlm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 16px;
+  align-items: center;
+}
+.vlm-grid .vlm-imgcell { display: flex; justify-content: center; }
+.vlm-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(20,22,40,0.07);
+}
+.vlm-grid .vlm-cap {
+  align-self: start;       /* captions align at the top, so text lines up */
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+  text-align: left;
+}
+@media (max-width: 640px) { .vlm-grid { grid-template-columns: 1fr; } }
 
 figure { margin: 0; }
 figure img {

@@ -188,23 +188,19 @@
   <section class="section alt">
     <div class="container narrow">
       <h2 class="section-title">Arm Assignment via Vision&ndash;Language Reasoning</h2>
-      <div class="dual-fig centered">
-        <figure>
-          <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" />
-          <figcaption>
-            <strong>Visual prompting.</strong> Grasp candidates are overlaid on the scene with symbolic arm-availability
-            markers &mdash; <strong>L</strong>&nbsp;(left), <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both) &mdash;
-            as visual cues for arm-to-object assignment.
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="static/images/vlm_prompt.png" alt="Example text prompt provided to the vision-language model" />
-          <figcaption>
-            <strong>Textual prompt.</strong> The marked image is paired with a structured text prompt &mdash; task instruction,
-            per-arm grasp costs, skills, label semantics, and step-by-step reasoning &mdash; from which the model outputs the
-            arm-to-object assignment and skill sequence.
-          </figcaption>
-        </figure>
+      <div class="vlm-grid">
+        <div class="vlm-imgcell"><img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" /></div>
+        <div class="vlm-imgcell"><img src="static/images/vlm_prompt.png" alt="Example text prompt provided to the vision-language model" /></div>
+        <p class="vlm-cap">
+          <strong>Visual prompting.</strong> Grasp candidates are overlaid on the scene with symbolic arm-availability
+          markers &mdash; <strong>L</strong>&nbsp;(left), <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both) &mdash;
+          as visual cues for arm-to-object assignment.
+        </p>
+        <p class="vlm-cap">
+          <strong>Textual prompt.</strong> The marked image is paired with a structured text prompt &mdash; task instruction,
+          per-arm grasp costs, skills, label semantics, and step-by-step reasoning &mdash; from which the model outputs the
+          arm-to-object assignment and skill sequence.
+        </p>
       </div>
     </div>
   </section>
