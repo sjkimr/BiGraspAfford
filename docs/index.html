@@ -151,26 +151,10 @@
     </div>
   </section>
 
-  <!-- ===================== VISUAL PROMPTING ===================== -->
+  <!-- ===================== RESULTS ===================== -->
   <section class="section">
     <div class="container narrow">
-      <h2 class="section-title">Arm Assignment via Vision&ndash;Language Reasoning</h2>
-      <figure>
-        <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" style="max-width: 520px; margin: 0 auto;" />
-        <figcaption>
-          <strong>Visual prompting for arm assignment.</strong> The predicted affordances generate grasp candidates that are
-          overlaid on the scene with symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left),
-          <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both) &mdash; and paired with a textual prompt, letting
-          the vision&ndash;language model reason about arm-to-object assignment and skill sequencing.
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ===================== RESULTS ===================== -->
-  <section class="section alt">
-    <div class="container narrow">
-      <h2 class="section-title">Results</h2>
+      <h2 class="section-title">Affordance Prediction Results</h2>
       <p class="muted">Per-point affordance prediction quality (confidence threshold &tau; = 0.6), averaged over left and right affordance maps. Best in <strong>bold</strong>.</p>
       <div class="table-wrap">
         <table>
@@ -197,13 +181,22 @@
           precise, arm-specific affordance maps.
         </figcaption>
       </figure>
+    </div>
+  </section>
 
-      <div class="stats">
-        <div class="stat"><span class="num">86.0%</span><span class="lbl">Real-world dual-arm<br />success rate</span></div>
-        <div class="stat"><span class="num">+6.0%</span><span class="lbl">over arm-agnostic<br />variant (80.0%)</span></div>
-        <div class="stat"><span class="num">30.4s</span><span class="lbl">avg. execution time<br />(vs. 39.1s arm-agnostic)</span></div>
-        <div class="stat"><span class="num">54,745</span><span class="lbl">training samples<br />via viewpoint propagation</span></div>
-      </div>
+  <!-- ===================== VISUAL PROMPTING ===================== -->
+  <section class="section alt">
+    <div class="container narrow">
+      <h2 class="section-title">Arm Assignment via Vision&ndash;Language Reasoning</h2>
+      <figure>
+        <img src="static/images/visual_prompt.png" alt="Marked visual prompt with arm-availability indicators" style="max-width: 520px; margin: 0 auto;" />
+        <figcaption>
+          <strong>Visual prompting for arm assignment.</strong> The predicted affordances generate grasp candidates that are
+          overlaid on the scene with symbolic arm-availability markers &mdash; <strong>L</strong>&nbsp;(left),
+          <strong>R</strong>&nbsp;(right), <strong>B</strong>&nbsp;(both) &mdash; and paired with a textual prompt, letting
+          the vision&ndash;language model reason about arm-to-object assignment and skill sequencing.
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -219,6 +212,13 @@
           arm-availability constraint, and <em>(3)</em> sequential left-then-right grasping to avoid arm crossing.
         </figcaption>
       </figure>
+
+      <div class="stats">
+        <div class="stat"><span class="num">86.0%</span><span class="lbl">Dual-arm<br />success rate</span></div>
+        <div class="stat"><span class="num">+6.0%</span><span class="lbl">over arm-agnostic<br />variant (80.0%)</span></div>
+        <div class="stat"><span class="num">30.4s</span><span class="lbl">avg. execution time<br />(vs. 39.1s arm-agnostic)</span></div>
+        <div class="stat"><span class="num">54,745</span><span class="lbl">training samples<br />via viewpoint propagation</span></div>
+      </div>
     </div>
   </section>
 
