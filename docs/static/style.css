@@ -12,6 +12,7 @@
 }
 
 * { box-sizing: border-box; }
+img { max-width: 100%; }
 
 html { scroll-behavior: smooth; font-size: 15px; }
 
@@ -186,10 +187,11 @@ a:hover { text-decoration: underline; }
 /* ---------- Figures ---------- */
 .dual-fig {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 20px;
   align-items: start;
 }
+.dual-fig > * { min-width: 0; }
 @media (max-width: 640px) { .dual-fig { grid-template-columns: 1fr; } }
 /* vertically center the two columns when their heights differ */
 .dual-fig.centered { align-items: center; }
