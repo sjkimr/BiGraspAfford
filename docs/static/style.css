@@ -272,7 +272,7 @@ tr.best td { background: var(--best-bg); font-weight: 700; }
 /* ---------- Stat highlights ---------- */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 38px;
 }
