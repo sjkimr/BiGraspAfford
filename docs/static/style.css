@@ -272,7 +272,7 @@ tr.best td { background: var(--best-bg); font-weight: 700; }
 /* ---------- Stat highlights ---------- */
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 38px;
 }
@@ -280,17 +280,24 @@ tr.best td { background: var(--best-bg); font-weight: 700; }
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 22px 14px;
+  padding: 24px 14px;
   text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
+.stat:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(20,22,40,0.10); }
 .stat .num {
   display: block;
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--accent-dark);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  background: linear-gradient(105deg, #06b6d4 0%, #2563eb 45%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
-.stat .lbl { display: block; font-size: 0.84rem; color: var(--muted); margin-top: 6px; }
+.stat .lbl { display: block; font-size: 0.84rem; color: var(--muted); margin-top: 8px; }
 
 /* ---------- BibTeX ---------- */
 .bibtex {
